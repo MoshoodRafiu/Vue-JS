@@ -1,0 +1,31 @@
+
+<div id="app">
+	
+	<a :href="url">{{url}}</a><br/>
+
+	<!-- <a v-on:click='number++'><h1>{{number}}</h1></a> -->
+	<a @click='number++'><h1>{{number}}</h1></a>
+
+	<a @click='number--'><h1>Decrease</h1></a>
+
+	<form action="" @submit.prevent="number++">
+		
+		<button type="submit">Submit</button>
+
+	</form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script type="text/javascript">
+	
+	new Vue({
+		el: '#app',
+		data: {
+			message: 'Hello',
+			number: 10,
+			url: 'https://finworldconsults.com'
+		}
+	})
+
+</script>
