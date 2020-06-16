@@ -1,0 +1,34 @@
+
+<div id="app">
+
+	<div :style="{color: 'red', fontSize: fontSize + 'px'}">{{ message }}</div>
+
+	<button @click="increaseFont">Increase Font</button>
+	<button @click="decreaseFont">Decrease Font</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script type="text/javascript">
+	
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			message: "Hello World Meezy",
+			fontSize: 12,
+		},
+
+		methods: {
+
+			increaseFont: function(){
+				this.fontSize++;
+			},
+			decreaseFont: function(){
+				this.fontSize--;
+			}
+
+		}
+
+	})
+
+</script>
