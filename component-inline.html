@@ -2,7 +2,9 @@
 <div id="app">
 	
 
-	<posts></posts>
+	<posts inline-template>
+		<h1 @click="display">Hello Boy</h1>
+	</posts>
 
 
 </div>
@@ -13,9 +15,16 @@
 <script type="text/javascript">
 
 	Vue.component('posts', {
+		data() {
+			return {
 
-		template: `<h1>Hello Boy</h1>`
-
+			}
+		},
+		methods: {
+			display(){
+				console.log('hello');
+			}
+		}
 	});
 	 
 	let vm = new Vue({
