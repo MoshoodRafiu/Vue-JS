@@ -1,0 +1,23 @@
+
+<div id="app">
+	<h1>Rafiu Moshood {{ isActive === 'active' ? 'is active' : 'not active' }}</h1>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script type="text/javascript">
+	
+	let vm = new Vue({
+		el: '#app',
+		data: {
+			isActive: 'not active'
+		},
+		watch: {
+			isActive: function(value){
+				console.log("Sending an email " + value);
+			}
+		}
+	})
+
+</script>
